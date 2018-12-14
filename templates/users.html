@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Юзеры</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h3 class="text-muted">Юзеры</h3>
+</div>
+
+<div class="jumbotron">
+    <div style="padding:40px">
+        <form action="/users/add" method="post">
+            <p><input type="text" name="username"></p>
+            <p><input type="text" name="email"></p>
+            <p><input type="submit" value="submit"/></p>
+        </form>
+
+        {% for user in users %}
+            <div class="container">
+            <p>username: {{ user.username }}, email: {{ user.email }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+
+</div>
+</body>
+</html>
