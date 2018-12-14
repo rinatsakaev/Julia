@@ -9,7 +9,7 @@ home_controller = Blueprint('home_controller', __name__)
 @home_controller.route('/')
 def index():
     receipts = []
-    for receipt_id in random.sample(range(500, 1000), 30):
+    for receipt_id in random.sample(range(500, 1000), 10):
         receipt = get_receipt(f"https://www.russianfood.com/recipes/recipe.php?rid={receipt_id}")
         if receipt:
             receipts.append(receipt)
