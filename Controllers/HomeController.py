@@ -2,7 +2,7 @@ from flask import Blueprint, render_template, request, redirect, url_for
 from Models.User import User
 from Helper import get_receipt
 import random
-from app import db
+from database import db
 home_controller = Blueprint('home_controller', __name__)
 
 
